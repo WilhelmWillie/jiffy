@@ -1,0 +1,18 @@
+{
+  "name": "jiffy",
+  "version": "0.1.0",
+  "description": "Desktop app to make GIFs from YT vids",
+  "repository": "wilhelmwillie/jiffy",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Wilhelm Willie",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "youtube-dl": "^1.12.2"
+  }
+}

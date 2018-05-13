@@ -1,0 +1,88 @@
+/*
+  Temporary Jiffy Styles
+*/
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body, .container-fluid {
+  background-color: #111;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.5em;
+  font-weight: 100;
+  color: #ffffff;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 25px;
+}
+
+.header {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.input-form {
+  padding: 15px;
+}
+
+input[type=text] {
+  border-radius: 5px 0 0 5px;
+  padding: 10px;
+  width: 70%;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-weight: 100;
+  border: none;
+}
+
+input[type=submit] {
+  float: right;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  border-radius: 0 5px 5px 0;
+  background: #FF5964;
+  border: none;
+  color: #ffffff;
+}
+
+.youtube-preview {
+  display: none;
+  padding: 15px 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.action-button {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #FF5964;
+  border: none;
+  color: #ffffff;
+}
