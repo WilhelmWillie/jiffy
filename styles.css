@@ -37,3 +37,24 @@ html, body {
 .main {
   padding: 1em;
 }
+
+.result img {
+  max-width: 100%;
+}
+
+/* Progress bar styles */
+.progress-bars {
+  display: none;
+}
+
+.progress {
+  margin-bottom: 15px;
+}
+
+.bg-download {
+  background: #45d0ff;
+}
+
+.bg-conversion {
+  background: #73ff45;
+}

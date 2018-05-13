@@ -26,8 +26,7 @@ $(() => {
 
     // Show the preview if we get a valid ID. Otherwise, alert user
     if (vidID) {
-      $('#youtube-vid-iframe').attr('src', `https://www.youtube.com/embed/${vidID}`)
-      $('.youtube-preview').slideDown('slow')
+      $('.youtube-vid-iframe').attr('src', `https://www.youtube.com/embed/${vidID}`)
     } else {
       alert('Invalid YouTube URL. Please try again.')
     }
@@ -45,9 +44,30 @@ $(() => {
       // How long the video is in ms
       let duration = 0
 
+      // How many bytes have been downloaded so far
+      let progress = 0
+
+      // How many bytes the overall video is
+      let size = 0
+
+      // Fade in progress bars
+      $('.progress-bars').show()
+
       // Called when video download starts
       video.on('info', function (info) {
+        size = parseInt(info.size)
         duration = parseInt(info.duration * 1000)
+      })
+
+      // Update progress for download
+      video.on('data', function (chunk) {
+        progress += chunk.length
+
+        const downloadPercentage = (progress / size) * 100
+
+        $('.progress-bar-download').css({
+          width: downloadPercentage + '%'
+        })
       })
 
       // Pipes the video download to file `temp.mp4`
@@ -57,13 +77,23 @@ $(() => {
       video.on('end', function () {
         gifshot.createGIF({
           'video': ['temp.mp4'],
-          'numFrames': (duration / 100)
+          'numFrames': (duration / 100),
+          'progressCallback': function (captureProgress) {
+            // Update the conversion progress bar
+            $('.progress-bar-conversion').css({
+              width: (captureProgress * 100) + '%'
+            })
+          }
         }, function (obj) {
           if (!obj.error) {
             var image = obj.image
 
-            $('.result img').attr('src', image)
-            $('.result').slideDown('slow')
+            // Fade out progress bars, then display generated GIF
+            $('.progress-bars').fadeOut('slow', function () {
+              $('.result img').hide()
+              $('.result img').attr('src', image)
+              $('.result img').fadeIn('slow')
+            })
           }
         })
       })
