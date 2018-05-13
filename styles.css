@@ -10,13 +10,17 @@ html, body, .container-fluid {
   background-color: #111;
 }
 
-h1 {
+h1, h2 {
   font-size: 4em;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
   color: #ffffff;
   margin: 0;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 .tagline {
@@ -85,4 +89,16 @@ input[type=submit] {
   background: #FF5964;
   border: none;
   color: #ffffff;
+}
+
+.result {
+  display: none;
+  padding: 15px 0;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+
+.result img {
+  max-width: 100%;
+  margin: 0 auto;
 }
