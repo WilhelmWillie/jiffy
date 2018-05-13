@@ -8,8 +8,8 @@ let window = null
 app.once('ready', () => {
   // Create a new window
   window = new BrowserWindow({
-    width: 480,
-    height: 640,
+    width: 800,
+    height: 450,
     backgroundColor: '#111',
     show: false
   })

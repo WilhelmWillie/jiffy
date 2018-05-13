@@ -5,6 +5,9 @@
     <title>Jiffy</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles.css">
 
     <script>
@@ -16,28 +19,35 @@
     <script src="./window.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="header">
-        <h1>Jiffy</h1>
-      </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Jiffy</a>
 
-      <div class="input-form">
-        <input type="text" value="https://www.youtube.com/watch?v=eTMb2UkW4xY" id="vid-input">
-        <input type="submit" value="Jiffy" id="vid-submit-button">
-        <div class="clear"></div>
+      <div class="form-inline">
+        <input class="form-control mr-sm-2 yt-vid-input" type="search" value="https://www.youtube.com/watch?v=eTMb2UkW4xY" placeholder="https://www.youtube.com/watch?v=eTMb2UkW4xY" aria-label="Search">
+        <button class="btn jiffy-btn my-2 my-sm-0 vid-submit-btn" type="submit">Jiffy</button>
       </div>
+    </nav>
 
-      <div class="youtube-preview">
-        <iframe width="100%" height="240" src="https://www.youtube.com/embed/" frameborder="0" id="youtube-vid-iframe"></iframe>
+    <div class="container-fluid main">
+      <div class="row">
+        <div class="col-sm">
+          <div class="youtube-preview">
+            <h2>Preview</h2>
 
-        <button class="action-button" id="convert-button">Convert</button>
-      </div>
+            <iframe width="100%" height="240" src="https://www.youtube.com/embed/" frameborder="0" id="youtube-vid-iframe"></iframe>
 
-      <div class="result">
-        <h2>Result</h2>
-        
-        <img />
-      </div>
+            <button class="btn jiffy-btn convert-btn">Convert</button>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="result">
+            <h2>Result</h2>
+            
+            <img />
+          </div>
+        </div>
+      </div>      
     </div>
   </body>
 </html>

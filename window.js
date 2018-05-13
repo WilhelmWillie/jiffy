@@ -19,9 +19,9 @@ $(() => {
   let vidID = null
 
   // Show a preview of the YouTube video before we start download
-  $('#vid-submit-button').click(function () {
+  $('.vid-submit-btn').click(function () {
     // Extract the YouTube video ID from input
-    const vidURL = $('#vid-input').val()
+    const vidURL = $('.yt-vid-input').val()
     vidID = validateYouTubeURL(vidURL)
 
     // Show the preview if we get a valid ID. Otherwise, alert user
@@ -34,7 +34,7 @@ $(() => {
   })
 
   // When convert button is clicked, download YouTube video
-  $('#convert-button').click(function () {
+  $('.convert-btn').click(function () {
     if (vidID) {
       // Downloads YouTube video via youtubedl w/ some options
       const video = youtubedl(
