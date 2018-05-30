@@ -9,6 +9,14 @@
 - `npm install` to install the application's dependencies
 - `npm start` to start the application
 
+## How Jiffy Works (Planned Workflow at least)
+
+1. First, Jiffy determines whether or not a given URL is a valid YouTube video
+2. If it is, Jiffy will download the video using `youtube-dl` to `temp.mp4`
+3. Once the video download is complete, Jiffy will let the user trim the video and set the GIF conversion settings
+4. Jiffy will then use Yahoo's GifShot JS library to convert `temp.mp4` to a GIF
+5. User has the option of saving the GIF  
+
 ## Done
 
 As of right now, Jiffy is still a work in progress. The following are features currently implemented.
