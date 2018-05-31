@@ -16,7 +16,7 @@ app.once('ready', () => {
 
   // Load index.html in the main window
   window.loadURL(url.format({
-    pathname: path.join(__dirname, 'download.html'),
+    pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))

@@ -76,6 +76,10 @@ $(() => {
       // Create GIF from video when download is done
       video.on('end', function () {
         // do something
+        $('.main').fadeOut('slow', function () {
+          $(this).load('convert.html')
+          $(this).fadeIn('slow')
+        })
       })
     }
   })
