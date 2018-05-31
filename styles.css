@@ -4,22 +4,13 @@
 
 html, body {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
 }
 
 /* Header styles */
-.navbar {
-  padding: 0 1rem;
-}
-
-.navbar-dark .navbar-brand {
-  background: #ff5964;
-  padding: 0.75em 1em;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-style: italic;
-}
-
 .jiffy-btn {
   background: #ff5964;
   font-weight: 700;
@@ -29,26 +20,42 @@ html, body {
   text-transform: uppercase;
 }
 
+.download-btn {
+  margin-top: 15px;
+}
+
+.yt-vid-form {
+  width: 100%;
+}
+
 .yt-vid-input {
-  width: 500px !important;
+  flex: 1;
 }
 
 /* Main styles */
 .main {
   padding: 1em;
+  flex: 1;
 }
 
 .result img {
   max-width: 100%;
 }
 
-/* Progress bar styles */
-.progress-bars {
-  display: none;
+/* Youtube Vid Preview */
+.youtube-preview {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
+.youtube-vid-iframe {
+  flex: 1;
+}
+
+/* Progress bar styles */
 .progress {
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .bg-download {
@@ -57,4 +64,9 @@ html, body {
 
 .bg-conversion {
   background: #73ff45;
+}
+
+/* Utility */
+.flex {
+  display: flex;
 }

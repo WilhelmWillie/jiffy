@@ -9,14 +9,14 @@ app.once('ready', () => {
   // Create a new window
   window = new BrowserWindow({
     width: 800,
-    height: 450,
+    height: 600,
     backgroundColor: '#111',
     show: false
   })
 
   // Load index.html in the main window
   window.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, 'download.html'),
     protocol: 'file:',
     slashes: true
   }))

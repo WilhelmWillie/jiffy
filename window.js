@@ -33,7 +33,7 @@ $(() => {
   })
 
   // When convert button is clicked, download YouTube video
-  $('.convert-btn').click(function () {
+  $('.download-btn').click(function () {
     if (vidID) {
       // Downloads YouTube video via youtubedl w/ some options
       const video = youtubedl(
@@ -75,6 +75,14 @@ $(() => {
 
       // Create GIF from video when download is done
       video.on('end', function () {
+        // do something
+      })
+    }
+  })
+})
+
+/* Convert
+function () {
         gifshot.createGIF({
           'video': ['temp.mp4'],
           'numFrames': (duration / 100),
@@ -96,7 +104,4 @@ $(() => {
             })
           }
         })
-      })
-    }
-  })
-})
+      } */
